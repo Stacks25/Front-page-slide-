@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name = "viewport" content="width=device-width, initial-scale=1.0">
+        <title>slide</title>
+        <link rel=" stylesheet" href="slide.css">
+    </head>
+    <body onload="slider()"> 
+        <div class="banner">
+            <div class ="slider">
+                <img src ="pexels-julie-aagaard-1426718.jpg" id ="slideImg">
+            </div>
+            <div class ="overlay">
+                <div class ="navbar">
+                    <div class = "logo">
+                        <img src = "moneylogo.png">
+                    </div>
+                    <div class ="menu-icons">
+                        <img src = "cart.png">
+                        <img src = "account icon.png">
+                        <img src = "wallet icon.png">
+                    </div>
+                </div>
+                <div class ="content">
+                    <h1> Investment Plan</h1>
+                    <h3> An Investment Plan You Can Trust And Trade With</h3>
+                <div>
+                    <button type ="button" class="btn-2">CHOOSE A PLAN</button>
+                    <button type = "button" class="btn-2">SIGN UP</button>
+                </div>
+
+            </div>
+            </div>
+        </div>
+           <script>
+               var slideImg = document.getElementById("slideImg");
+               var images = new Array(
+                 "pexels-lisa-fotios-734973.jpg",
+                 "pexels-julie-aagaard-1426718.jpg",
+                 "pexels-lumn-1028600.jpg",
+                 "pexels-steve-johnson-861414.jpg"
+
+                 
+               );
+               var len = images.length;
+               var i =0;
+
+               function slider (){
+                   if (i > len-1){
+                       i = 0;
+                   }
+                   slideImg.src = images[i];
+                   i++;
+                   setTimeout("slider()",3000);
+               }
+           </script>
+    </body>
+</html>
